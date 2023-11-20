@@ -11,3 +11,24 @@ The data contains sequences with distribution of poor to well differentiated ade
 The reference genome used for alignment can be found here: https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26/.
 
 ### Data Preprocessing (Part I)
+
+Preparation of the data for the ML algorithms includes a pipeline:
+
+* To use SRA-Toolkits prefetch to retrieve all samples:
+`while read accession; do
+  prefetch "$accession"
+done < SRA_accessions.txt`
+
+
+* To convert all paired sample .sra files to fastq files:
+`for dir in SRR*/; do
+    echo "Processing $dir"
+    fastq-dump --split-files --gzip "$dir/${dir%/}.sra"
+done`
+
+
+* To trim all fastq samples:
+`for file in *_1.fastq; do
+    base=$(basename "$file" "_1.fastq")
+    fastp -i "${base}_1.fastq" -I "${base}_2.fastq" -o "../FASTQ_SAMPLES_TRIMMED/${base}_1_trimmed.fq" -O "../FASTQ_SAMPLES_TRIMMED/${base}_2_trimmed.fq"
+done`
