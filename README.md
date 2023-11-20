@@ -43,5 +43,6 @@ done`
 done`
 
 * Align reads to the reference genome using `alignments.sh` script:
+  
 `chmod +x alignment.sh`
 `./alignment.sh`
