@@ -14,10 +14,10 @@ The reference genome used for alignment can be found here: https://www.ncbi.nlm.
 
 Preparation of the data for the ML algorithms includes a pipeline containing various bioinformatics tools:
 ```mermaid
-flowchart TB
-  SRA Acessions --> SRA-Toolkits prefetch
-  .sra files --> fastq-dump
-  Sample fastq files --> fastp
+flowchart TB;
+  SRA Acessions --> SRA-Toolkits prefetch;
+  .sra files --> fastq-dump;
+  Sample fastq files --> fastp;
 ```
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
