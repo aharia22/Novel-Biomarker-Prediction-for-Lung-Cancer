@@ -21,18 +21,19 @@ flowchart TB;
 ```
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
-  
-`while read accession; do
+``` 
+while read accession; do
   prefetch "$accession"
 done < SRA_accessions.txt`
-
+```
 
 * To convert all paired sample .sra files to fastq files:
-  
-`for dir in SRR*/; do
+```
+for dir in SRR*/; do
     echo "Processing $dir"
     fastq-dump --split-files --gzip "$dir/${dir%/}.sra"
-done`
+done
+```
 
 
 * To trim all fastq samples:
@@ -44,6 +45,7 @@ done
 ```
 
 * Align reads to the reference genome using `alignments.sh` script:
-  
-- `chmod +x alignment.sh`
-- `./alignment.sh`
+```
+chmod +x alignment.sh
+./alignment.sh
+```
