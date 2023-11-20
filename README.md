@@ -36,11 +36,12 @@ done`
 
 
 * To trim all fastq samples:
-  
-`for file in *_1.fastq; do
+```
+for file in *_1.fastq; do
     base=$(basename "$file" "_1.fastq")
     fastp -i "${base}_1.fastq" -I "${base}_2.fastq" -o "../FASTQ_SAMPLES_TRIMMED/${base}_1_trimmed.fq" -O "../FASTQ_SAMPLES_TRIMMED/${base}_2_trimmed.fq"
-done`
+done
+```
 
 * Align reads to the reference genome using `alignments.sh` script:
   
