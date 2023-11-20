@@ -12,7 +12,11 @@ The reference genome used for alignment can be found here: https://www.ncbi.nlm.
 
 ### Data Preprocessing (Part I)
 
-Preparation of the data for the ML algorithms includes a pipeline:
+Preparation of the data for the ML algorithms includes a pipeline containing various bioinformatics tools:
+'''mermaid
+flowchart TB
+  SRA Acessions --> SRA-Toolkits prefetch
+'''
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
   
