@@ -16,6 +16,8 @@ Preparation of the data for the ML algorithms includes a pipeline containing var
 ```mermaid
 flowchart TB
   SRA Acessions --> SRA-Toolkits prefetch
+  .sra files --> fastq-dump
+  Sample fastq files --> fastp
 ```
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
