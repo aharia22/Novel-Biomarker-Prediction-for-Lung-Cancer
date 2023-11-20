@@ -15,7 +15,7 @@ The reference genome used for alignment can be found here: https://www.ncbi.nlm.
 Preparation of the data for the ML algorithms includes a pipeline containing various bioinformatics tools:
 ```mermaid
 graph TD;
-    SRA_accessions.txt-->SRA-Toolkits_prefetch;
+    SRA_accessions.txt-->SRA-Toolkits prefetch;
     A-->C;
     B-->D;
     C-->D;
