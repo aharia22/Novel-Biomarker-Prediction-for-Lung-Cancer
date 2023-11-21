@@ -21,10 +21,12 @@ graph TD;
     fastq-dump-->untrimmed_fastqs;
     untrimmed_fastqs-->FastQC;
     FastQC-->MultiQC
+    MultiQC-->untrimmed_quality_report
     untrimmed_fastqs-->fastp;
     fastp-->trimmed_fastq_files;
     trimmed_fastq_files-->FastQC2;
     FastQC2-->MultiQC2;
+    MultiQC2-->trimmed_quality_report
     trimmed_fastq_files-->HISAT2;
 ```
 
