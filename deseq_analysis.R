@@ -5,7 +5,7 @@ BiocManager::install("DESeq2")
 #load the DESeq2 package
 library(DESeq2)
 
-#load your RNA-seq count data
+#load RNA-seq count data
 counts <- read.delim("GSE103584_R01_NSCLC_RNAseq.txt", header=TRUE, row.names=1)
 
 #replace NAs with zeros
@@ -27,7 +27,7 @@ dds <- DESeqDataSetFromMatrix(countData = counts, colData = colData, design = ~ 
 #run the DESeq pipeline
 dds <- DESeq(dds)
 
-#running the differential analysis (adjust the contrast as per your experimental design)
+#running the differential analysis
 res <- results(dds, contrast=c("treatment", "male", "female"))
 
 #ordering results by significance
