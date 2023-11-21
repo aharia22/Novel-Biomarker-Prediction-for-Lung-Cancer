@@ -23,6 +23,8 @@ graph TD;
     FastQC-->MultiQC
     untrimmed_fastqs-->fastp;
     fastp-->trimmed_fastq_files;
+    trimmed_fastq_files-->FastQC;
+    FastQC-->MultiQC;
     trimmed_fastq_files-->HISAT2;
 ```
 
