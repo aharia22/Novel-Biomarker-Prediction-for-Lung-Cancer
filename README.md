@@ -19,6 +19,11 @@ graph TD;
     SRA-Toolkits/prefetch-->.sra_files;
     .sra_files-->fastq-dump;
     fastq-dump-->untrimmed_fastqs;
+    untrimmed_fastqs-->FastQC;
+    FastQC-->MultiQC
+    untrimmed_fastqs-->fastp;
+    fastp-->trimmed_fastq_files;
+    trimmed_fastq_files-->HISAT2;
 ```
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
