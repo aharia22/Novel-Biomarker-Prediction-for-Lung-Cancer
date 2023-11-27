@@ -30,6 +30,8 @@ graph TD;
     Maching_Learning_Models-->KNN;
 ```
 
+#### Data Preparation (Part I)
+
 Preparation of the data for the ML algorithms includes a pipeline containing various bioinformatics tools:
 ```mermaid
 graph TD;
