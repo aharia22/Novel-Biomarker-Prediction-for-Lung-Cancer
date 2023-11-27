@@ -33,11 +33,13 @@ graph TD;
 ```mermaid
 graph TD;
     RNA_seq_FASTQs-->Reference_Genome_Alignment(HISAT2);
-    Reference_Genome_Alignment(HISAT2)-->Transcript_Quantification/Merging(StringTie);
-    Transcript_Quantification/Merging(StringTie)-->Differential_Expression(DESeq2);
-    Differential_Expression(DESeq2)-->Pathway_Analysis(KOBAS);
-    Differential_Expression(DESeq2)-->SCLC/NSCLC_Gene_Classification;
-    Pathway_Analysis(KOBAS)-->SCLC/NSCLC_Gene_Classification;
+    Reference_Genome_Alignment_HISAT2-->Transcript_Quantification/Merging_StringTie;
+    Transcript_Quantification/Merging_StringTie-->Differential_Expression_DESeq2_;
+    Differential_Expression_DESeq2-->Pathway_Analysis_KOBAS;
+    Differential_Expression_DESeq2-->SCLC/NSCLC_Gene_Classification;
+    Pathway_Analysis_KOBAS-->SCLC/NSCLC_Gene_Classification;
+    Differential_Expression_DESeq2-->Dataset_Annotation;
+    Pathway_Analysis_KOBAS-->Dataset_Annotation;
 ```
 
 
