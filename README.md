@@ -29,6 +29,17 @@ graph TD;
     MultiQC2-->trimmed_quality_report
     trimmed_fastq_files-->HISAT2;
 ```
+#### Project Overview 
+```mermaid
+graph TD;
+    RNA_seq_FASTQs-->Reference_Genome_Alignment(HISAT2);
+    Reference_Genome_Alignment(HISAT2)-->Transcript_Quantification/Merging(StringTie);
+    Transcript_Quantification/Merging(StringTie)-->Differential_Expression(DESeq2);
+    Differential_Expression(DESeq2)-->Pathway_Analysis(KOBAS);
+    Differential_Expression(DESeq2)-->SCLC/NSCLC_Gene_Classification;
+    Pathway_Analysis(KOBAS)-->SCLC/NSCLC_Gene_Classification;
+```
+
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
 ``` 
