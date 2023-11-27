@@ -30,6 +30,13 @@ graph TD;
     Maching_Learning_Models-->KNN;
 ```
 
+```mermaid
+graph TD;
+    RNA_seq_FASTQs-->Reference_Genome_Alignment_HISAT2;
+    Reference_Genome_Alignment_HISAT2-->Transcript_Quantification/Merging_StringTie;
+    Transcript_Quantification/Merging_StringTie-->Differential_Expression_DESeq2;
+```
+
 #### Data Preparation (Part I)
 
 Preparation of the data for the ML algorithms includes a pipeline containing various bioinformatics tools:
