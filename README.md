@@ -10,7 +10,27 @@ The data contains sequences with distribution of poor to well differentiated ade
 
 The reference genome used for alignment can be found here: https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26/.
 
-### Data Preprocessing (Part I)
+### Project Overview 
+
+```mermaid
+graph TD;
+    RNA_seq_FASTQs-->Reference_Genome_Alignment_HISAT2;
+    Reference_Genome_Alignment_HISAT2-->Transcript_Quantification/Merging_StringTie;
+    Transcript_Quantification/Merging_StringTie-->Differential_Expression_DESeq2;
+    Differential_Expression_DESeq2-->Pathway_Analysis_KOBAS;
+    Differential_Expression_DESeq2-->SCLC/NSCLC_Gene_Classification;
+    Pathway_Analysis_KOBAS-->SCLC/NSCLC_Gene_Classification;
+    Differential_Expression_DESeq2-->Dataset_Annotation;
+    Pathway_Analysis_KOBAS-->Dataset_Annotation;
+    Dataset_Annotation-->Data_Preprocessing;
+    Data_Preprocessing-->Maching_Learning_Models;
+    Maching_Learning_Models-->Logistic_Regression;
+    Maching_Learning_Models-->Random_Forest;
+    Maching_Learning_Models-->SVM;
+    Maching_Learning_Models-->KNN;
+```
+
+#### Data Preprocessing (Part I)
 
 Preparation of the data for the ML algorithms includes a pipeline containing various bioinformatics tools:
 ```mermaid
@@ -29,19 +49,6 @@ graph TD;
     MultiQC2-->trimmed_quality_report
     trimmed_fastq_files-->HISAT2;
 ```
-#### Project Overview 
-```mermaid
-graph TD;
-    RNA_seq_FASTQs-->Reference_Genome_Alignment_HISAT2;
-    Reference_Genome_Alignment_HISAT2-->Transcript_Quantification/Merging_StringTie;
-    Transcript_Quantification/Merging_StringTie-->Differential_Expression_DESeq2;
-    Differential_Expression_DESeq2-->Pathway_Analysis_KOBAS;
-    Differential_Expression_DESeq2-->SCLC/NSCLC_Gene_Classification;
-    Pathway_Analysis_KOBAS-->SCLC/NSCLC_Gene_Classification;
-    Differential_Expression_DESeq2-->Dataset_Annotation;
-    Pathway_Analysis_KOBAS-->Dataset_Annotation;
-```
-
 
 * To use SRA-Toolkits prefetch to retrieve all samples:
 ``` 
