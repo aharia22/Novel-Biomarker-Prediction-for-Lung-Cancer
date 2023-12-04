@@ -15,6 +15,7 @@ The reference genome used for alignment can be found here: https://www.ncbi.nlm.
 ```mermaid
 graph TD;
     RNA_seq_FASTQs-->Reference_Genome_Alignment_HISAT2;
+    RNA_seq_FASTQs-->FastQC;
     Reference_Genome_Alignment_HISAT2-->Transcript_Quantification/Merging_StringTie;
     Transcript_Quantification/Merging_StringTie-->Differential_Expression_DESeq2;
     Differential_Expression_DESeq2-->Pathway_Analysis_KOBAS;
