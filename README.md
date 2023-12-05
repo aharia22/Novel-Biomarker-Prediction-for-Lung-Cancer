@@ -27,7 +27,8 @@ graph TD;
     Data_Preprocessing-->Maching_Learning_Models;
     Maching_Learning_Models-->Logistic_Regression;
     Maching_Learning_Models-->Random_Forest;
-    Maching_Learning_Models-->SVM;
+    Maching_Learning_Models-->Gradient_Boost;
+    Maching_Learning_Models-->AdaBoost;
     Maching_Learning_Models-->KNN;
 ```
 
