@@ -1,21 +1,5 @@
 # ML-Final-Project
 
-```
-nm = NearMiss()
-print('SCLC Original Shape:', Counter(sclc))
-features_nm_sclc, nm_sclc = nm.fit_resample(features, sclc)
-print('SCLC Resample Shape:', Counter(nm_sclc))
-print('NSCLC Original Shape:', Counter(nsclc))
-features_nm_nsclc, nm_nsclc = nm.fit_resample(features, nsclc)
-print('NSCLC Resample Shape:', Counter(nm_nsclc))
-
-SCLC Original Shape: Counter({0.0: 18857, 1.0: 921})
-SCLC Resample Shape: Counter({0.0: 921, 1.0: 921})
-NSCLC Original Shape: Counter({0.0: 19087, 1.0: 691})
-NSCLC Resample Shape: Counter({0.0: 691, 1.0: 691})
-```
-
-
 ## Introduction
 
 The inspiration for this project comes from the publication: Novel Biomarker Prediction for Lung Cancer Using Random Forest Classifiers
