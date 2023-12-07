@@ -81,11 +81,12 @@ done
 chmod +x alignment.sh
 ./alignment.sh
 ```
-
-`nm = NearMiss()
+```
+nm = NearMiss()
 print('SCLC Original Shape:', Counter(sclc))
 features_nm_sclc, nm_sclc = nm.fit_resample(features, sclc)
 print('SCLC Resample Shape:', Counter(nm_sclc))
 print('NSCLC Original Shape:', Counter(nsclc))
 features_nm_nsclc, nm_nsclc = nm.fit_resample(features, nsclc)
-print('NSCLC Resample Shape:', Counter(nm_nsclc))`
+print('NSCLC Resample Shape:', Counter(nm_nsclc))
+```
