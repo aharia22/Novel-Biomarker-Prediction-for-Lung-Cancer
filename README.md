@@ -1,5 +1,15 @@
 # ML-Final-Project
 
+```
+nm = NearMiss()
+print('SCLC Original Shape:', Counter(sclc))
+features_nm_sclc, nm_sclc = nm.fit_resample(features, sclc)
+print('SCLC Resample Shape:', Counter(nm_sclc))
+print('NSCLC Original Shape:', Counter(nsclc))
+features_nm_nsclc, nm_nsclc = nm.fit_resample(features, nsclc)
+print('NSCLC Resample Shape:', Counter(nm_nsclc))
+```
+
 ## Introduction
 
 The inspiration for this project comes from the publication: Novel Biomarker Prediction for Lung Cancer Using Random Forest Classifiers
@@ -81,12 +91,4 @@ done
 chmod +x alignment.sh
 ./alignment.sh
 ```
-```
-nm = NearMiss()
-print('SCLC Original Shape:', Counter(sclc))
-features_nm_sclc, nm_sclc = nm.fit_resample(features, sclc)
-print('SCLC Resample Shape:', Counter(nm_sclc))
-print('NSCLC Original Shape:', Counter(nsclc))
-features_nm_nsclc, nm_nsclc = nm.fit_resample(features, nsclc)
-print('NSCLC Resample Shape:', Counter(nm_nsclc))
-```
+
