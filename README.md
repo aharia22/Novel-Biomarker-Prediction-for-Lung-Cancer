@@ -1,5 +1,13 @@
 # ML-Final-Project
 
+```
+SCLC Original Shape: Counter({0.0: 18857, 1.0: 921})
+SCLC Resample Shape: Counter({0.0: 921, 1.0: 921})
+NSCLC Original Shape: Counter({0.0: 19087, 1.0: 691})
+NSCLC Resample Shape: Counter({0.0: 691, 1.0: 691})
+```
+
+
 ## Introduction
 
 The inspiration for this project comes from the publication: Novel Biomarker Prediction for Lung Cancer Using Random Forest Classifiers
